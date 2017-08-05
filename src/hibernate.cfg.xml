@@ -18,5 +18,7 @@
 
     <mapping class="com.codegirl.model.Author"/>
     <mapping class="com.codegirl.model.Book"/>
+
+    <mapping class="com.codegirl.model.Person"/>
   </session-factory>
 </hibernate-configuration>

@@ -1,5 +1,6 @@
 package com.codegirl;
 
+import com.codegirl.model.Person;
 import com.codegirl.model.Post;
 import com.codegirl.model.PostDetails;
 import org.hibernate.Session;
@@ -41,6 +42,14 @@ public class HibernateTest {
         session.save(postDetails);
 
         Post post1 = session.find(Post.class, 1L);
+
+
+        Person person1 = new Person();
+        person1.setName("Şeyma");
+        person1.setAge(23);
+        person1.setGender(Gender.FEMALE);
+
+        session.save(person1);
 
         session.getTransaction().commit();
         session.close();
